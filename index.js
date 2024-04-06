@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 import inquirer from "inquirer";
 const currency = {
     USD: 1,
@@ -37,7 +38,7 @@ while (retry) {
     const again = await inquirer.prompt({
         type: "confirm",
         name: "again",
-        message: "Did You Want To Try Again ?",
+        message: "Did You Want To Convert More ?",
         default: false
     });
     retry = again.again;
